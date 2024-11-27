@@ -15,4 +15,8 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [RegisterUserController::class, 'store'])->name('register.store');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::delete('/logout', [SessionController::class, 'destroy'])->name('logout');
+});
