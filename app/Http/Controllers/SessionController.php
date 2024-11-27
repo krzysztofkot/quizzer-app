@@ -13,6 +13,17 @@ class SessionController extends Controller
         return view('Auth.login');
     }
 
+    public function destroy(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect()->route('homepage');
+    }
+
     public function store(Request $request)
     {
         $credentials = $request->validate([
@@ -23,7 +34,7 @@ class SessionController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('dashboard.index');
+            return redirect()->intended(route('dashboard'));
         } else {
             throw ValidationException::withMessages(['email' => 'Incorrect E-mail or/and password']);
         }
