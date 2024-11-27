@@ -7,7 +7,7 @@
             <x-forms.text-field name="name" label="Name" />
             <x-forms.text-field name="email" label="E-mail" type="email" />
             <x-forms.text-field name="password" label="Password" type="password" />
-            <x-forms.text-field name="password_confirmation" label="Password Confirmation" />
+            <x-forms.text-field name="password_confirmation" label="Password Confirmation" type="password" />
             <x-forms.button>Register</x-forms.button>
         </x-forms.form>
     </div>
