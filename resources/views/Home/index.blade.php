@@ -1,5 +1,5 @@
 <x-layout>
-    <x-utility.page-heading>
+    <x-utility.h1>
         Welcome on homepage
-    </x-utility.page-heading>
+    </x-utility.h1>
 </x-layout>

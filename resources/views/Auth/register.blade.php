@@ -1,7 +1,7 @@
 <x-layout>
-    <x-utility.page-heading>
+    <x-utility.h1>
         First time? Please register!
-    </x-utility.page-heading>
+    </x-utility.h1>
     <div class="rounded-md p-4 max-w-[480px] mx-auto bg-white mt-12">
         <x-forms.form method="POST" action="{{ route('register.store') }}" class="flex flex-col gap-y-4">
             <x-forms.text-field name="name" label="Name" />
