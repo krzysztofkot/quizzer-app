@@ -21,5 +21,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/quizes', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/dashboard/quizes/create', [QuizController::class, 'create'])->name('quizes.create');
     Route::post('/dashboard/quizes', [QuizController::class, 'store'])->name('quizes.store');
+    Route::get('/dashboard/quizes/{quiz}', [QuizController::class, 'show'])->name('quizes.show');
     Route::delete('/logout', [SessionController::class, 'destroy'])->name('logout');
 });
