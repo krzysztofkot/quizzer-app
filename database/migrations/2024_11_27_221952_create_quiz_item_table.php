@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('quiz_items', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Quiz::class);
+            $table->string('question');
             $table->string('photo_name')->nullable();
             $table->string('answer_a');
             $table->string('answer_b');
