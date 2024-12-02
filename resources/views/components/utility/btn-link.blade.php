@@ -13,4 +13,4 @@ $type = match ($type) {
 };
 ?>
 
-<a {{ $attributes->class([$type, $size, 'w-max']) }}>{{ $slot }}</a>
+<a {{ $attributes->class([$type, $size, 'w-max block']) }}>{{ $slot }}</a>
