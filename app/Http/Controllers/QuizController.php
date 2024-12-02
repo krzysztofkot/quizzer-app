@@ -32,4 +32,10 @@ class QuizController extends Controller
     {
         return view('Quizes.show', ['quiz' => $quiz]);
     }
+
+    public function destroy(Quiz $quiz)
+    {
+        $quiz->delete();
+        return redirect(route('dashboard'));
+    }
 }
